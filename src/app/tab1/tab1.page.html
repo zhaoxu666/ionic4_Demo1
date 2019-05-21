@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button color="primary">Primary</ion-button>
+  <ion-item>
+    <ion-badge slot="start">11</ion-badge>
+    <ion-label>My Item</ion-label>
+    <ion-badge slot="end">22</ion-badge>
+  </ion-item>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-label>测试</ion-label>
+    <ion-checkbox slot="end" ></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-chip>
+      <ion-label>Default</ion-label>
+    </ion-chip>
+  </ion-item>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+  </ion-item>
+  <ion-button color="primary" [routerLink]="['/news']"  > GO newsComponent </ion-button>
+  <app-slide ></app-slide>
+</ion-content>
