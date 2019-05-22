@@ -3,10 +3,31 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref=""></ion-back-button>
     </ion-buttons>
-    <ion-title>button</ion-title>
+    <ion-title>按钮组件演示</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-button color="primary" [routerLink]="['']" > GoHomePage</ion-button>
+  <ion-button color="dark" > 通过color属性 修改按钮颜色 </ion-button>
+  <ion-button color="dark" expand="blok"> expand 设置按钮宽度 -- blok </ion-button>
+  <ion-button color="dark" expand="full"> expand 设置按钮宽度 -- full</ion-button>
+  <ion-button fill="outline" color="warning"> fill 设置背景填充 -- outline </ion-button>
+  <ion-button fill="clear" color="warning"> fill 设置背景填充 -- clear </ion-button>
+  <ion-button fill="clear" color="warning">
+    <ion-icon slot="icon-only" name="add"></ion-icon>
+  </ion-button>
+  <ion-button size="large">size 设置按钮大小 --large  </ion-button>
+  <ion-button size="large">size 设置按钮大小 --large  </ion-button>
+  <ion-button size="small">size 设置按钮大小 --small  </ion-button>
+  <ion-button mode='ios'> mode 设置按钮平台 -- ios  </ion-button>
+  <ion-button mode='md'> mode 设置按钮平台 -- md  </ion-button>
+  <ion-button color="dark">
+      <ion-icon slot="start" name="add"></ion-icon>
+      icon在左，文字在右-- slot start
+  </ion-button>
+  <ion-button color="dark">
+      <ion-icon slot="end" name="add"></ion-icon>
+      icon在右，文字在左 -- slot end
+  </ion-button>
 </ion-content>
