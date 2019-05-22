@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" defaultHref='tabs/tab1'></ion-back-button>
+    </ion-buttons>
+    <ion-title>form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <ion-item-divider> 用户基本信息 </ion-item-divider>
+    <ion-item>
+      <ion-label> 用户名 </ion-label>
+      <ion-input type="text" [(ngModel)]="peopleInfo.userName"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> 年龄 </ion-label>
+      <ion-input type="text" [(ngModel)]="peopleInfo.age"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> 是否本科 </ion-label>
+      <ion-toggle [(ngModel)]="peopleInfo.flag"></ion-toggle>
+    </ion-item>
+    <ion-item-divider> 支付方式 </ion-item-divider>
+    <ion-radio-group [(ngModel)]="peopleInfo.payType">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="">
+        </ion-avatar>
+        <ion-label> 支付宝支付 </ion-label>
+        <ion-radio slot="end" value="1"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="">
+        </ion-avatar>
+        <ion-label> 微信支付 </ion-label>
+        <ion-radio slot="end" value="2"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-item-divider> 爱好 </ion-item-divider>
+    <ion-item *ngFor="let item of peopleInfo.checkBoxList">
+      <ion-checkbox slot="start" [(ngModel)]="item.isChecked"></ion-checkbox>
+      <ion-label> {{item.val}} </ion-label>
+    </ion-item>
+    <ion-item-divider> 地址 </ion-item-divider>
+    <ion-item >
+      <ion-label> 城市 </ion-label>  
+      <ion-select placeholder="选择城市" multiple="true" interface="alert" mutiple [(ngModel)]="peopleInfo.city">
+        <ion-select-option [value]="item" *ngFor="let item of peopleInfo.cityList"> {{item}} </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item > 
+      <ion-label> 备注 </ion-label>
+      <ion-textarea [(ngModel)]="peopleInfo.remark">  </ion-textarea>  
+    </ion-item>
+  </ion-list>
+  {{peopleInfo|json}}
+</ion-content>

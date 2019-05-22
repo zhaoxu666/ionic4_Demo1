@@ -6,6 +6,12 @@ const routes: Routes = [
   { path: 'button', loadChildren: './button/button.module#ButtonPageModule' },
   { path: 'news', loadChildren: './news/news.module#NewsPageModule' },
   { path: 'toolbar', loadChildren: './toolbar/toolbar.module#ToolbarPageModule' },
+  { path: 'list', loadChildren: './list/list.module#ListPageModule' },
+  { path: 'form', loadChildren: './form/form.module#FormPageModule' },
+  { path: 'sildes', loadChildren: './sildes/sildes.module#SildesPageModule' },
+  { path: 'searchbar', loadChildren: './searchbar/searchbar.module#SearchbarPageModule' },
+  { path: 'segment', loadChildren: './segment/segment.module#SegmentPageModule' },
+  { path: 'datetime', loadChildren: './datetime/datetime.module#DatetimePageModule' },
 ];
 @NgModule({
   imports: [

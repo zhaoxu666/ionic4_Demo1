@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+  </ion-buttons>
+    <ion-title>sildes 组件演示</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" (ionSlideTouchEnd)="autoPlay()" #slide1>
+    <ion-slide>
+      <h1> 11 </h1>
+    </ion-slide>
+    <ion-slide>
+      <h1> 22 </h1>
+    </ion-slide>
+    <ion-slide>
+      <h1> 33 </h1>
+    </ion-slide>
+  </ion-slides>
+  <ion-slides pager="true"  #slides>
+      <ion-slide>
+        <h1> 11 </h1>
+      </ion-slide>
+      <ion-slide>
+        <h1> 22 </h1>
+      </ion-slide>
+      <ion-slide>
+        <h1> 33 </h1>
+      </ion-slide>
+    </ion-slides>
+    <ion-button (click)="slidesNext()"> slidesTwo 下一页 </ion-button>
+    <ion-button (click)="slidesPre()"> slidesTwo 上一页 </ion-button>
+</ion-content>

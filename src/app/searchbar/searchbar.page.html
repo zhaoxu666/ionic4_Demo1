@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>searchbar 组件演示</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="请输入内容" ></ion-searchbar>
+  <ion-searchbar placeholder="请输入内容" animated ></ion-searchbar>
+  <ion-searchbar placeholder="请输入内容(添加type属性只能输入数字)" animated type="number"></ion-searchbar>
+  <ion-searchbar placeholder="添加color属性" animated color="warning"></ion-searchbar>
+  <ion-searchbar placeholder="文本框改变(去抖动,debounce属性)" debounce="500" animated (ionChange)="doChange()"></ion-searchbar>
+</ion-content>
