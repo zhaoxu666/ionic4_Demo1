@@ -74,4 +74,23 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+/**自定义主题颜色**/
+  .ion-color-aaa { 
+    --ion-color-base: #69bb7b;  //基本颜色
+    --ion-color-base-rgb: 105,187,123; //基本rgb颜色
+    --ion-color-contrast: #ffffff; //对比颜色
+    --ion-color-contrast-rgb: 255,255,255; //对比颜色rgb
+    --ion-color-shade: #5ca56c; //阴影颜色
+    --ion-color-tint: #78c288;
+  }
+/**自定义tab颜色**/
+  .ion-color-tabs { 
+    --ion-color-base: #69bb7b;  //基本颜色
+    --ion-color-base-rgb: 105,187,123; //基本rgb颜色
+    --ion-color-contrast: #ffffff; //对比颜色
+    --ion-color-contrast-rgb: 255,255,255; //对比颜色rgb
+    --ion-color-shade: #5ca56c; //阴影颜色
+    --ion-color-tint: #78c288;
+  }
 }
