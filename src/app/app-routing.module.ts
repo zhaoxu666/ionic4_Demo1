@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'searchbar', loadChildren: './searchbar/searchbar.module#SearchbarPageModule' },
   { path: 'segment', loadChildren: './segment/segment.module#SegmentPageModule' },
   { path: 'datetime', loadChildren: './datetime/datetime.module#DatetimePageModule' },
+  { path: 'slide-menu', loadChildren: './slide-menu/slide-menu.module#SlideMenuPageModule' },
 ];
 @NgModule({
   imports: [
