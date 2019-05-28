@@ -20,12 +20,22 @@
     "@angular/platform-browser": "^7.2.2",
     "@angular/platform-browser-dynamic": "^7.2.2",
     "@angular/router": "^7.2.2",
+    "@ionic-native/baidu-push": "^5.6.1",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/device": "^5.6.1",
     "@ionic-native/splash-screen": "^5.0.0",
+    "@ionic-native/sqlite": "^5.6.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.1.0",
     "@ionic/pro": "2.0.4",
+    "@jiguang-ionic/jpush": "^2.0.0",
+    "cordova-android": "8.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-jcore": "^1.2.8",
+    "cordova-plugin-push-baidu": "5.6.1",
+    "cordova-sqlite-storage": "3.2.0",
     "core-js": "^2.5.4",
+    "jpush-phonegap-plugin": "^3.6.4",
     "rxjs": "~6.5.1",
     "silly-datetime": "^0.1.2",
     "tslib": "^1.9.0",
@@ -41,10 +51,15 @@
     "@angular/compiler-cli": "~7.2.2",
     "@angular/language-service": "~7.2.2",
     "@ionic/angular-toolkit": "~1.5.1",
-    "@types/node": "~12.0.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~12.0.0",
     "codelyzer": "~4.5.0",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^4.0.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -57,5 +72,27 @@
     "tslint": "~5.16.0",
     "typescript": "~3.1.6"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-sqlite-storage": {},
+      "jpush-phonegap-plugin": {
+        "APP_KEY": "1dd7dce665af54404ebf2be4",
+        "CHANNEL": "developer-default"
+      },
+      "cordova-plugin-jcore": {},
+      "cordova-plugin-push-baidu": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }

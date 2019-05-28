@@ -8,7 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { Device } from '@ionic-native/device/ngx';
+import { JPush } from '@jiguang-ionic/jpush/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,7 +17,9 @@ import { AppComponent } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Device,
+    JPush
   ],
   bootstrap: [AppComponent],
 })

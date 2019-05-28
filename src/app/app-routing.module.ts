@@ -13,6 +13,10 @@ const routes: Routes = [
   { path: 'segment', loadChildren: './segment/segment.module#SegmentPageModule' },
   { path: 'datetime', loadChildren: './datetime/datetime.module#DatetimePageModule' },
   { path: 'slide-menu', loadChildren: './slide-menu/slide-menu.module#SlideMenuPageModule' },
+  { path: 'action-sheet', loadChildren: './action-sheet/action-sheet.module#ActionSheetPageModule' },
+  { path: 'toast', loadChildren: './toast/toast.module#ToastPageModule' },
+  { path: 'loading', loadChildren: './loading/loading.module#LoadingPageModule' },
+  { path: 'little-button', loadChildren: './button/little-button/little-button.module#LittleButtonPageModule' },
 ];
 @NgModule({
   imports: [

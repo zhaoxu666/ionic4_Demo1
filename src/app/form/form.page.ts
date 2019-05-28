@@ -7,6 +7,7 @@ import { PeopleInfo } from './people-info';
   styleUrls: ['./form.page.scss'],
 })
 export class FormPage implements OnInit {
+
   public peopleInfo:PeopleInfo = {
     userName:'',
     age:20,
@@ -26,6 +27,7 @@ export class FormPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
