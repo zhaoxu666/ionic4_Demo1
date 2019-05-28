@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'toast', loadChildren: './toast/toast.module#ToastPageModule' },
   { path: 'loading', loadChildren: './loading/loading.module#LoadingPageModule' },
   { path: 'little-button', loadChildren: './button/little-button/little-button.module#LittleButtonPageModule' },
+  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' },
 ];
 @NgModule({
   imports: [
