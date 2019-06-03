@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>sqlite</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab4"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button (click)="setData()">
+      Creat Sqlite
+    </ion-button>
+    <ion-button (click)="GetData()">
+      Get SqliteData
+    </ion-button>
+    {{userList|json}}
+</ion-content>

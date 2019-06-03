@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pdf插件演示Modal</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="doClose()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+  <pdf-viewer [src]="url"
+              [show-all]="true"
+              [original-size]="false"
+              [zoom]=1
+              [render-text]="false"
+              [autoresize]="true"
+              style="display: block" 
+              (after-load-complete)="callBackFn($event)" 
+              (page-rendered)="pageRendered($event)">
+  </pdf-viewer>
+</div>
+</ion-content>

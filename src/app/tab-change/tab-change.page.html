@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tabChange</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="tab" color="warning">
+    <ion-segment-button value="0" (click)="changeSlide(0)">
+      <ion-label> 简介 </ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="1" (click)="changeSlide(1)">
+      <ion-label> 详情 </ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2" (click)="changeSlide(2)">
+      <ion-label> 评论 </ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-slides  #slides  (ionSlideTouchEnd)="didChange()" class="min-height" >
+    <ion-slide  >
+      <h1> 11 </h1>
+    </ion-slide>
+    <ion-slide   >
+      <h1> 22 </h1>
+    </ion-slide>
+    <ion-slide   >
+      <h1> 33 </h1>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>calling</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/tabs/ta4'></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <a class="button button-full button-positive" [href]="tel">拨打电话tel</a> 
+  <a class="button button-full button-positive" [href]="tel1">拨打电话tel1</a> 
+  <ion-button (click)="startCallNumber()">
+    拨打电话
+  </ion-button>
+  <ion-button (click)="startReocrd()">
+    开始录音
+  </ion-button>
+  <ion-button (click)="pauseRecord()">
+    暂停录音
+  </ion-button>
+  <ion-button (click)="play()">
+    继续播放录音
+  </ion-button>
+  <ion-button (click)="stopRecord()">
+    停止结束录音
+  </ion-button>
+</ion-content>
