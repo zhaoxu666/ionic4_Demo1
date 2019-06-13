@@ -32,9 +32,11 @@ export class Tab2Page {
   }
 
   getData(){
-    let api = ""
+    let api = "http://a.itying.com/api/productlist"
     this.httpService.get(api).then((response)=>{
-        console.log(response);
+        alert(JSON.stringify(response));
+    },err=>{
+      alert(JSON.stringify(err));
     })
   }
 

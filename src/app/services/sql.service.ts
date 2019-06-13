@@ -89,17 +89,32 @@ export class SQLService {
   }
 
 
-  deleteItem(sqlStatements,val){
-    this.dataBase.executeSql(sqlStatements,val)
-    .then((res)=>{
-      var str = JSON.stringify(res);
-      alert(`删除成功${str}`);
+  deleteItem(sqlStatements, val) {
+    return new Promise((resolve, reject) => {
+      this.dataBase.executeSql(sqlStatements, val)
+        .then((res) => {
+          var str = JSON.stringify(res);
+          alert(`删除成功${str}`);
+          resolve();
+        })
+        .catch(err => {
+          alert(`删除失败${JSON.stringify(err)}`);
+          reject(err);
+        })
     })
-    .catch(err=>{
-      alert(`删除失败${JSON.stringify(err)}`);
-    })
+
   }
 
+  sqlBatch(sqlStatements){
+    this.dataBase.sqlBatch(sqlStatements).then(response=>{
+      var res = JSON.stringify(response);
+     alert(`批量增加成功${res}`);
+
+    },error=>{
+      var err = JSON.stringify(error);
+      alert(`批量增加失败${err}`)
+    })
+  }
 
 
 

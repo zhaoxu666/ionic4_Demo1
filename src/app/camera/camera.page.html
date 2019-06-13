@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/tabs/tab4'></ion-back-button>
+    </ion-buttons>
+    <ion-title>camera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="openCamera()">
+    camera
+  </ion-button>
+  <div class="correct-errors-image-content">
+      <div class="correct-errors-image-wrap" *ngFor="let imgSrc of imageDatas">
+        <img [src]="imgSrc.Data" />
+      </div>
+    </div>
+    <ion-button (click)="openCameraPreview()">
+        OpenCameraPreview
+    </ion-button>
+    <ion-button (click)="showCameraPreview()">
+        ShowCameraPreview
+    </ion-button>
+    <ion-button (click)="takePicture()">
+        TakePicture
+    </ion-button>
+    <div class="correct-errors-image-content">
+        <div class="correct-errors-image-wrap" *ngFor="let imgSrc of imageDatasPreview">
+          <img [src]="imgSrc.Data" />
+        </div>
+      </div>
+      <ion-button (click)="takeSnapshot()">
+          TakeSnapshot 
+      </ion-button>
+      <div class="correct-errors-image-content">
+          <div class="correct-errors-image-wrap" *ngFor="let imgSrc of imageDatasSnapShot">
+            <img [src]="imgSrc.Data" />
+          </div>
+        </div>
+        <ion-button (click)="imagePicker()">
+            imagePicker 
+        </ion-button>
+</ion-content>

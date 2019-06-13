@@ -9,10 +9,22 @@
 
 <ion-content>
     <ion-button (click)="setData()">
-      Creat Sqlite
+      Set Sqlite
     </ion-button>
     <ion-button (click)="GetData()">
       Get SqliteData
+    </ion-button>
+    <ion-button (click)="Refresh()">
+      Refresh
+    </ion-button>
+    <ion-button (click)="getList()">
+      getList
+    </ion-button>
+    <ion-button (click)="getDRSList()">
+      getDRSList
+    </ion-button>
+    <ion-button (click)="addBatch()">
+      addBatch
     </ion-button>
     {{userList|json}}
 </ion-content>

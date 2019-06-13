@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'sqlite', loadChildren: './sqlite/sqlite.module#SqlitePageModule' },
   { path: 'calling', loadChildren: './calling/calling.module#CallingPageModule' },
   { path: 'ionic', loadChildren: './ionic/ionic.module#IonicPageModule' },
+  { path: 'camera', loadChildren: './camera/camera.module#CameraPageModule' },
 ];
 @NgModule({
   imports: [

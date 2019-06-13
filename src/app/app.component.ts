@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Device } from '@ionic-native/device/ngx';
 import { JPush } from '@jiguang-ionic/jpush/ngx';
 import { UniqueDeviceID } from '@ionic-native/unique-device-id/ngx';
+declare var CallTrap: any;
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -28,13 +29,28 @@ export class AppComponent {
     this.uuid = this.device.uuid;
     
     this.initializeApp();
-    console.log(this.uuid)
+  //   CallTrap.onCall(function(result) {
+  //     alert("CHANGE STATE: " + result.state);
+  //      // only in ringing state
+
+  //  switch (result.state) {
+  //          case "RINGING":
+  //           alert("Phone is ringing" + result.number);
+  //              break;
+  //          case "OFFHOOK":
+  //           alert("Phone is off-hook");
+  //           case "IDLE":
+  //           alert('phone is Idle');
+  //      }
+
+  //  });
 
   }
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.getUniqueDeviceId()
     });
   }
 
@@ -42,7 +58,7 @@ export class AppComponent {
     this.uniqueDeviceID.get()
     .then((uuid)=>{
       this.uniqueId = uuid;
-      alert(`成功${this.uniqueId}`);
+      alert(`成功uniqueId:${this.uniqueId}`);
     })
     .catch(err=>{
       var error = JSON.stringify(err);

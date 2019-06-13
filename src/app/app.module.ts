@@ -24,6 +24,9 @@ import { UniqueDeviceID } from '@ionic-native/unique-device-id/ngx';
 import { Media } from '@ionic-native/media/ngx';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { Sim } from '@ionic-native/sim/ngx';
+import {Network} from "@ionic-native/network/ngx";
+import { Camera } from '@ionic-native/camera/ngx';
+import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -46,7 +49,10 @@ import { Sim } from '@ionic-native/sim/ngx';
     UniqueDeviceID,
     Media,
     CallNumber,
-    Sim
+    Sim,
+    Network,
+    Camera,
+    CameraPreview
   ],
   bootstrap: [AppComponent],
 })

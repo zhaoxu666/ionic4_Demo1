@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>calling</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref='/tabs/ta4'></ion-back-button>
+      <ion-back-button defaultHref='/tabs/tab4'></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -25,4 +25,10 @@
   <ion-button (click)="stopRecord()">
     停止结束录音
   </ion-button>
+  <ion-button (click)="getSimInfo()">
+   获取sim卡信息
+  </ion-button>
+  <ion-button (click)="getPhoneCallStatus()">
+    获取手机当前通话状态
+   </ion-button>
 </ion-content>

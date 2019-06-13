@@ -8,6 +8,9 @@
 
 <ion-content>
   <ion-button color="primary" [routerLink]="['/button']">GO button Component  </ion-button>
+  <ion-button (click)="getData()">
+    getData
+  </ion-button>
   <app-slide ></app-slide>
   <ion-list>
     <ion-item *ngFor="let item of list">
